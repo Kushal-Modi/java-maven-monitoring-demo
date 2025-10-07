@@ -14,10 +14,4 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            echo 'Cleaning up...'
-            bat 'taskkill /F /IM java.exe || exit 0'  // Stop the Java app
-        }
-    }
 }
